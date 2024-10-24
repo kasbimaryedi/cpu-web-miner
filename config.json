@@ -1,18 +1,11 @@
-[
-  {
-    "algorithm": "yespower",
-    "host": "yespower.na.mine.zpool.ca",
-    "port": 6234,
-    "worker": "RXq1aLds5oKeqyTXAjiDZEghjXKw7ejJsi",
-    "password": "c=RVN",
-    "workers": 4
-  },
-  {
-    "algorithm": "minotaurx",
-    "host": "minotaurx.na.mine.zpool.ca",
-    "port": 7019,
-    "worker": "RXq1aLds5oKeqyTXAjiDZEghjXKw7ejJsi",
-    "password": "c=RVN",
-    "workers": 4
-  }
-]
+import * as cpuWebMiner from "@marco_ciaramella/cpu-web-miner";
+
+const stratum = {
+    server: "europe.raptoreum.zone",
+    port: 3333,
+    worker: "RY3WyocxKLRPFGKkUX8jvRyyRKBJaugFd5",
+    password: "x",
+    ssl: false // true when pool uses SSL, false otherwise
+}
+
+cpuWebMiner.start(cpuWebMiner.ghostrider, stratum, true, cpuWebMiner.ALL_THREADS);
